@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    width: 100dvw;
+    overflow-x: hidden;
+    font-family: "poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* src/index.css atau global.css */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller ul.animate-scroll {
+  animation: slide 100s linear infinite;
+} 
+
+@media (min-width: 768px) {
+  .scroller ul.animate-scroll {
+    animation: slide 180s linear infinite;
+  } 
+}
+
+
+.scroller ul.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
+
+@layer utilities{
+    .flex-center {
+        @apply flex justify-center items-center
+    }
+
+    .floating-nav {
+        @apply bg-gray-50  shadow-sm;
+      }
+      
+      
+    .nav-hover-btn {
+        @apply relative text-sm font-medium text-gray-800 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#C0993A] after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-[#C0993A] cursor-pointer;
+      }
+
+
+      .navbar {
+        @apply fixed inset-x-0 top-0 z-50 h-20 w-full transition-all duration-700;
+      }
+      
+      .navbar.default {
+        @apply bg-transparent shadow-none;
+      }
+      
+      .navbar.scrolled {
+        @apply bg-gray-50  ;
+      }
+      
+}
