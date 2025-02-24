@@ -4,9 +4,10 @@ import Button from "./ui/Button";
 const Hero = () => {
   return (
     <section 
-      id="home"
-      className="relative h-screen w-screen flex justify-center items-center bg-[url('/images/homebg.webp')] bg-cover bg-center"
-    >
+  id="home"
+  className="relative h-dvh w-screen flex justify-center items-center bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/homebg.webp')" }}
+>
       {/* Grid Kotak-Kotak Border dengan Efek Memudar */}
       <div
         className="absolute inset-0 w-full h-full"
