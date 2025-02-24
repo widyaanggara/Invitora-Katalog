@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section 
       id="home"
-      className="relative h-dvh w-screen flex justify-center items-center bg-[url('/images/homebg.png')] bg-cover bg-center"
+      className="relative h-dvh w-screen flex justify-center items-center bg-[url('/images/homebg.webp')] bg-cover bg-center"
     >
       {/* Grid Kotak-Kotak Border dengan Efek Memudar */}
       <div
